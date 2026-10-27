@@ -14,7 +14,7 @@ browse it on GitHub) and compare its design with yours. Do not look for "who did
 - Who flags more spikes, and with what rule? What trade-off is there between catching spikes and over-flagging?
 - Which features did each one choose? Which contributes more? (Run an experiment: remove a feature and measure the AP.)
 
-Also look at the data generator (`make_data.py` on that branch) and see **which problems were hidden**. Compare them with your
+Now it is also fair to open `checks/_truth.json`, which describes **which problems were hidden** in the data. Compare them with your
 step 1 findings: which ones did you find, which not, and why? That question —*what am I not looking at?*— is the one
 that will make you grow the most.
 
