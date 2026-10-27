@@ -12,6 +12,19 @@ bronze_readings ──► silver_tables ──► gold_features ──► risk_p
 
 and that allows, with one command or from a web interface, **materializing everything** end to end, in the right order.
 
+Each asset calls code you already wrote; Dagster only describes what depends on what:
+
+```mermaid
+flowchart LR
+    A["bronze_readings<br/>calls bronze.run()"] --> B["silver_tables<br/>dbt build, silver"] --> C["gold_features<br/>dbt build, gold"] --> D["risk_predictions<br/>calls train.run()"]
+    A -.-> K{{"asset check<br/>files in quarantine?"}}
+
+    classDef asset fill:#dbeafe,stroke:#2563eb,color:#111
+    classDef check fill:#f3e8ff,stroke:#9333ea,color:#111
+    class A,B,C,D asset
+    class K check
+```
+
 ## Why this step exists
 
 So far you run four commands by hand (`make bronze`, `silver`, `gold`, `train`). In a job, nobody runs that by hand

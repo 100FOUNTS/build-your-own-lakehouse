@@ -11,6 +11,28 @@ A program (`python -m lakehouse.bronze`) that reads the raw historian files and 
 - if new files arrive, it **loads only the new ones**,
 - if a file is broken, it **does not crash** nor silently ignores it.
 
+One possible shape of the logic (there are other designs; yours must be defensible):
+
+```mermaid
+flowchart TD
+    A["For each raw file<br/>(sorted, always the same order)"] --> B{"Does its Parquet<br/>already exist?"}
+    B -- yes --> C["Skip it<br/>this is what makes a re-run harmless"]
+    B -- no --> D["Read it as text,<br/>by column name"]
+    D --> E{"Could it be read?"}
+    E -- yes --> F["Write to name.tmp,<br/>then rename to name.parquet<br/>(atomic)"]
+    E -- "no, a broken file" --> G["Quarantine: copy it<br/>and write down the reason"]
+    F --> H["Next file"]
+    C --> H
+    G --> H
+
+    classDef ok fill:#dcfce7,stroke:#16a34a,color:#111
+    classDef warn fill:#fef3c7,stroke:#d97706,color:#111
+    classDef skip fill:#e5e7eb,stroke:#6b7280,color:#111
+    class F ok
+    class G warn
+    class C skip
+```
+
 ## Why this step exists
 
 Think of a scientist's lab notebook: you write **what was observed**, with a date, without erasing crossed-out lines.

@@ -18,6 +18,21 @@ PLT01-P107  2026-07-02     2.31      0.21     71.9       …   1     ← this pu
 
 And a test, `tests/test_no_leakage.py`, that proves your features do not cheat.
 
+How the leakage test you will write works:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant T as Your test
+    participant W as Warehouse copy
+    participant D as dbt (subprocess)
+    T->>W: copy the warehouse
+    T->>W: delete silver after a cutoff
+    T->>D: rebuild gold on the copy
+    D->>W: write gold, no future data
+    Note over T,W: Compare the features before the cutoff,<br/>original versus copy.<br/>Identical = no leakage. Different = a feature used the future.
+```
+
 ## Why this step exists
 
 A machine learning model does not understand millions of 10-minute readings: it understands **a table where each row is an

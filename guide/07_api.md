@@ -13,6 +13,20 @@ A web service (FastAPI) that answers Marta —or the maintenance system— with 
 | `GET /assets/PLT01-P107/risk` | `{"asset_id": "PLT01-P107", "as_of": "2026-09-27", "risk_score": 0.83, "alert": true}` |
 | `GET /assets/DOES-NOT-EXIST/risk` | **404** with a clear message |
 
+What happens on a request:
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant A as FastAPI
+    participant D as DuckDB, read-only
+    C->>A: GET /assets/PLT01-P107/risk
+    A->>D: open the database, ask for the latest prediction of that pump
+    D-->>A: one row, or nothing
+    A-->>C: 200 with asset_id, as_of, risk_score and alert
+    Note over A,C: an unknown pump gets a 404 with a clear message, never a 500
+```
+
 ## Why this step exists
 
 So far your work lives in a DuckDB file that only you know how to open. A model that nobody can query does not
