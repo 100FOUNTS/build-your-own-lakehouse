@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+# What YOU generate while doing the exercise (never the raw data in data/raw or data/incoming)
+data/bronze/
+data/quarantine/
+data/models/
+data/*.duckdb*
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+.dagster/
+.tmp_dagster_home_*/
+.env
+.DS_Store

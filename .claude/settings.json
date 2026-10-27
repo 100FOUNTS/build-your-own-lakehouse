@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run *)",
+      "Bash(make *)",
+      "Bash(ls *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)"
+    ],
+    "deny": [
+      "Read(./checks/_truth.json)",
+      "Bash(*_truth.json*)",
+      "Edit(./data/raw/**)",
+      "Write(./data/raw/**)",
+      "Edit(./data/incoming/**)",
+      "Write(./data/incoming/**)",
+      "Bash(rm -rf data/raw*)",
+      "Bash(rm -rf data*)"
+    ]
+  }
+}

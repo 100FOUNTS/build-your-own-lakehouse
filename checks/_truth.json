@@ -1,0 +1,555 @@
+{
+ "spikes": [
+  {
+   "asset_id": "PLT01-P118",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-06-20T01:00:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P105",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-06-15T04:10:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-08-23T03:50:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-08-26T12:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P116",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-05-28T17:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P105",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-08-16T06:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P102",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-07-17T01:00:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P111",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-05-08T21:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P101",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-07-14T03:20:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P109",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-06-23T21:50:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P101",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-09-24T08:10:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P109",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-09-02T17:50:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P105",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-09-09T11:10:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-05-23T03:20:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-05-08T22:00:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P112",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-08-31T02:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-09-05T07:10:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-09-11T16:50:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P110",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-05-20T08:50:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P118",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-07-29T17:20:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P109",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-06-20T01:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-09-14T20:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-07-08T15:40:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-09-19T16:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P111",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-05-11T15:00:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P106",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-06-11T02:30:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P120",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-09-26T15:40:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P111",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-09-02T16:00:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P111",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-07-31T06:20:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P112",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-07-04T19:40:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P103",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-09-18T11:00:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P103",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-07-19T15:20:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P113",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-07-25T02:40:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P119",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-07-15T15:40:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P109",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-09-24T22:10:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "sensor": "TEMP_BEARING",
+   "ts_utc": "2026-07-19T19:00:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "sensor": "PRESS_DISCH",
+   "ts_utc": "2026-09-04T20:40:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-05-25T06:20:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "sensor": "CURRENT_A",
+   "ts_utc": "2026-07-12T16:10:00+00:00"
+  },
+  {
+   "asset_id": "PLT01-P119",
+   "sensor": "VIB_MM_S",
+   "ts_utc": "2026-07-29T22:40:00+00:00"
+  }
+ ],
+ "failures": [
+  {
+   "asset_id": "PLT01-P101",
+   "failure_ts": "2026-07-09T02:33:31.030908+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P101",
+   "failure_ts": "2026-09-26T21:42:05.042846+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P102",
+   "failure_ts": "2026-09-06T17:36:21.051621+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P103",
+   "failure_ts": "2026-06-09T12:08:07.049979+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "failure_ts": "2026-06-19T04:30:39.788310+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P104",
+   "failure_ts": "2026-08-01T09:20:34.212398+00:00",
+   "mode": "cavitation"
+  },
+  {
+   "asset_id": "PLT01-P105",
+   "failure_ts": "2026-05-28T00:42:07.426145+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P106",
+   "failure_ts": "2026-06-27T20:53:04.952908+00:00",
+   "mode": "cavitation"
+  },
+  {
+   "asset_id": "PLT01-P106",
+   "failure_ts": "2026-08-15T11:12:06.555812+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P108",
+   "failure_ts": "2026-08-09T07:31:37.656462+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P109",
+   "failure_ts": "2026-07-17T11:05:16.621176+00:00",
+   "mode": "cavitation"
+  },
+  {
+   "asset_id": "PLT01-P110",
+   "failure_ts": "2026-06-08T20:49:05.229010+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P110",
+   "failure_ts": "2026-09-11T14:52:26.564917+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P111",
+   "failure_ts": "2026-07-03T12:19:47.662530+00:00",
+   "mode": "cavitation"
+  },
+  {
+   "asset_id": "PLT01-P111",
+   "failure_ts": "2026-08-13T05:10:10.641849+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P112",
+   "failure_ts": "2026-07-24T13:28:45.797336+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P113",
+   "failure_ts": "2026-06-07T16:31:54.386400+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P113",
+   "failure_ts": "2026-08-26T23:08:14.996257+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "failure_ts": "2026-06-28T13:01:42.058499+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P114",
+   "failure_ts": "2026-09-24T11:24:45.228350+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P115",
+   "failure_ts": "2026-05-31T00:51:20.525464+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P115",
+   "failure_ts": "2026-08-30T04:17:53.179925+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P116",
+   "failure_ts": "2026-06-27T11:48:43.361605+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P117",
+   "failure_ts": "2026-08-18T17:30:30.484142+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P118",
+   "failure_ts": "2026-08-02T22:26:07.958041+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P118",
+   "failure_ts": "2026-09-22T09:02:07.586028+00:00",
+   "mode": "seal"
+  },
+  {
+   "asset_id": "PLT01-P119",
+   "failure_ts": "2026-07-20T09:22:00.573691+00:00",
+   "mode": "cavitation"
+  },
+  {
+   "asset_id": "PLT01-P119",
+   "failure_ts": "2026-09-20T03:47:56.922277+00:00",
+   "mode": "bearing"
+  },
+  {
+   "asset_id": "PLT01-P120",
+   "failure_ts": "2026-08-17T22:53:31.072187+00:00",
+   "mode": "cavitation"
+  },
+  {
+   "asset_id": "PLT01-P120",
+   "failure_ts": "2026-09-27T07:21:23.565905+00:00",
+   "mode": "bearing"
+  }
+ ],
+ "special": {
+  "empty_file": 20,
+  "swap_header_file": 33,
+  "outage_file": 45,
+  "corrupt_file": 61,
+  "switch_file_utc": 95,
+  "temp_degF": [
+   "PLT01-P108",
+   "2026-07-10"
+  ],
+  "press_bar": [
+   "PLT01-P115",
+   "2026-07-30"
+  ],
+  "stuck": [
+   "PLT01-P117",
+   "TEMP_BEARING",
+   "2026-07-10T05:00:00+00:00",
+   "2026-07-12T05:00:00+00:00"
+  ],
+  "late_row_files": [
+   26,
+   27,
+   30,
+   57,
+   70,
+   92,
+   98,
+   117,
+   147,
+   155
+  ],
+  "raw_files": 150,
+  "start": "2026-05-01"
+ },
+ "raw_manifest": {
+  "historian/date=2026-05-01/readings_20260501.csv.gz": 82241,
+  "historian/date=2026-05-02/readings_20260502.csv.gz": 82109,
+  "historian/date=2026-05-03/readings_20260503.csv.gz": 85495,
+  "historian/date=2026-05-04/readings_20260504.csv.gz": 82226,
+  "historian/date=2026-05-05/readings_20260505.csv.gz": 85550,
+  "historian/date=2026-05-06/readings_20260506.csv.gz": 81991,
+  "historian/date=2026-05-07/readings_20260507.csv.gz": 82086,
+  "historian/date=2026-05-08/readings_20260508.csv.gz": 82022,
+  "historian/date=2026-05-09/readings_20260509.csv.gz": 81954,
+  "historian/date=2026-05-10/readings_20260510.csv.gz": 82138,
+  "historian/date=2026-05-11/readings_20260511.csv.gz": 82190,
+  "historian/date=2026-05-12/readings_20260512.csv.gz": 81987,
+  "historian/date=2026-05-13/readings_20260513.csv.gz": 82220,
+  "historian/date=2026-05-14/readings_20260514.csv.gz": 82127,
+  "historian/date=2026-05-15/readings_20260515.csv.gz": 85346,
+  "historian/date=2026-05-16/readings_20260516.csv.gz": 82201,
+  "historian/date=2026-05-17/readings_20260517.csv.gz": 82132,
+  "historian/date=2026-05-18/readings_20260518.csv.gz": 82200,
+  "historian/date=2026-05-19/readings_20260519.csv.gz": 85371,
+  "historian/date=2026-05-20/readings_20260520.csv.gz": 85711,
+  "historian/date=2026-05-21/readings_20260521.csv.gz": 81,
+  "historian/date=2026-05-22/readings_20260522.csv.gz": 85464,
+  "historian/date=2026-05-23/readings_20260523.csv.gz": 81992,
+  "historian/date=2026-05-24/readings_20260524.csv.gz": 82090,
+  "historian/date=2026-05-25/readings_20260525.csv.gz": 82173,
+  "historian/date=2026-05-26/readings_20260526.csv.gz": 82148,
+  "historian/date=2026-05-27/readings_20260527.csv.gz": 81877,
+  "historian/date=2026-05-28/readings_20260528.csv.gz": 82241,
+  "historian/date=2026-05-29/readings_20260529.csv.gz": 82668,
+  "historian/date=2026-05-30/readings_20260530.csv.gz": 85701,
+  "historian/date=2026-05-31/readings_20260531.csv.gz": 81651,
+  "historian/date=2026-06-01/readings_20260601.csv.gz": 85784,
+  "historian/date=2026-06-02/readings_20260602.csv.gz": 82296,
+  "historian/date=2026-06-03/readings_20260603.csv.gz": 85883,
+  "historian/date=2026-06-04/readings_20260604.csv.gz": 82206,
+  "historian/date=2026-06-05/readings_20260605.csv.gz": 82246,
+  "historian/date=2026-06-06/readings_20260606.csv.gz": 82314,
+  "historian/date=2026-06-07/readings_20260607.csv.gz": 81990,
+  "historian/date=2026-06-08/readings_20260608.csv.gz": 81866,
+  "historian/date=2026-06-09/readings_20260609.csv.gz": 84927,
+  "historian/date=2026-06-10/readings_20260610.csv.gz": 85673,
+  "historian/date=2026-06-11/readings_20260611.csv.gz": 81826,
+  "historian/date=2026-06-12/readings_20260612.csv.gz": 81938,
+  "historian/date=2026-06-13/readings_20260613.csv.gz": 85500,
+  "historian/date=2026-06-14/readings_20260614.csv.gz": 85557,
+  "historian/date=2026-06-15/readings_20260615.csv.gz": 61914,
+  "historian/date=2026-06-16/readings_20260616.csv.gz": 82178,
+  "historian/date=2026-06-17/readings_20260617.csv.gz": 82236,
+  "historian/date=2026-06-18/readings_20260618.csv.gz": 82398,
+  "historian/date=2026-06-19/readings_20260619.csv.gz": 81667,
+  "historian/date=2026-06-20/readings_20260620.csv.gz": 85719,
+  "historian/date=2026-06-21/readings_20260621.csv.gz": 82188,
+  "historian/date=2026-06-22/readings_20260622.csv.gz": 85738,
+  "historian/date=2026-06-23/readings_20260623.csv.gz": 82275,
+  "historian/date=2026-06-24/readings_20260624.csv.gz": 82533,
+  "historian/date=2026-06-25/readings_20260625.csv.gz": 82398,
+  "historian/date=2026-06-26/readings_20260626.csv.gz": 85952,
+  "historian/date=2026-06-27/readings_20260627.csv.gz": 81631,
+  "historian/date=2026-06-28/readings_20260628.csv.gz": 84949,
+  "historian/date=2026-06-29/readings_20260629.csv.gz": 81511,
+  "historian/date=2026-06-30/readings_20260630.csv.gz": 81848,
+  "historian/date=2026-07-01/readings_20260701.csv.gz": 45323,
+  "historian/date=2026-07-02/readings_20260702.csv.gz": 82270,
+  "historian/date=2026-07-03/readings_20260703.csv.gz": 81930,
+  "historian/date=2026-07-04/readings_20260704.csv.gz": 81780,
+  "historian/date=2026-07-05/readings_20260705.csv.gz": 82094,
+  "historian/date=2026-07-06/readings_20260706.csv.gz": 82182,
+  "historian/date=2026-07-07/readings_20260707.csv.gz": 82156,
+  "historian/date=2026-07-08/readings_20260708.csv.gz": 85527,
+  "historian/date=2026-07-09/readings_20260709.csv.gz": 81588,
+  "historian/date=2026-07-10/readings_20260710.csv.gz": 84988,
+  "historian/date=2026-07-11/readings_20260711.csv.gz": 85876,
+  "historian/date=2026-07-12/readings_20260712.csv.gz": 82714,
+  "historian/date=2026-07-13/readings_20260713.csv.gz": 82773,
+  "historian/date=2026-07-14/readings_20260714.csv.gz": 82815,
+  "historian/date=2026-07-15/readings_20260715.csv.gz": 82958,
+  "historian/date=2026-07-16/readings_20260716.csv.gz": 86263,
+  "historian/date=2026-07-17/readings_20260717.csv.gz": 82732,
+  "historian/date=2026-07-18/readings_20260718.csv.gz": 85944,
+  "historian/date=2026-07-19/readings_20260719.csv.gz": 82848,
+  "historian/date=2026-07-20/readings_20260720.csv.gz": 82416,
+  "historian/date=2026-07-21/readings_20260721.csv.gz": 85670,
+  "historian/date=2026-07-22/readings_20260722.csv.gz": 82626,
+  "historian/date=2026-07-23/readings_20260723.csv.gz": 85999,
+  "historian/date=2026-07-24/readings_20260724.csv.gz": 82272,
+  "historian/date=2026-07-25/readings_20260725.csv.gz": 85844,
+  "historian/date=2026-07-26/readings_20260726.csv.gz": 82662,
+  "historian/date=2026-07-27/readings_20260727.csv.gz": 86105,
+  "historian/date=2026-07-28/readings_20260728.csv.gz": 82730,
+  "historian/date=2026-07-29/readings_20260729.csv.gz": 82561,
+  "historian/date=2026-07-30/readings_20260730.csv.gz": 82747,
+  "historian/date=2026-07-31/readings_20260731.csv.gz": 83150,
+  "historian/date=2026-08-01/readings_20260801.csv.gz": 82541,
+  "historian/date=2026-08-02/readings_20260802.csv.gz": 82658,
+  "historian/date=2026-08-03/readings_20260803.csv.gz": 85757,
+  "historian/date=2026-08-04/readings_20260804.csv.gz": 81326,
+  "historian/date=2026-08-05/readings_20260805.csv.gz": 81886,
+  "historian/date=2026-08-06/readings_20260806.csv.gz": 81837,
+  "historian/date=2026-08-07/readings_20260807.csv.gz": 81530,
+  "historian/date=2026-08-08/readings_20260808.csv.gz": 82242,
+  "historian/date=2026-08-09/readings_20260809.csv.gz": 81603,
+  "historian/date=2026-08-10/readings_20260810.csv.gz": 84870,
+  "historian/date=2026-08-11/readings_20260811.csv.gz": 81565,
+  "historian/date=2026-08-12/readings_20260812.csv.gz": 81971,
+  "historian/date=2026-08-13/readings_20260813.csv.gz": 81655,
+  "historian/date=2026-08-14/readings_20260814.csv.gz": 81821,
+  "historian/date=2026-08-15/readings_20260815.csv.gz": 85308,
+  "historian/date=2026-08-16/readings_20260816.csv.gz": 85135,
+  "historian/date=2026-08-17/readings_20260817.csv.gz": 85287,
+  "historian/date=2026-08-18/readings_20260818.csv.gz": 81183,
+  "historian/date=2026-08-19/readings_20260819.csv.gz": 81441,
+  "historian/date=2026-08-20/readings_20260820.csv.gz": 81846,
+  "historian/date=2026-08-21/readings_20260821.csv.gz": 81828,
+  "historian/date=2026-08-22/readings_20260822.csv.gz": 81724,
+  "historian/date=2026-08-23/readings_20260823.csv.gz": 81844,
+  "historian/date=2026-08-24/readings_20260824.csv.gz": 85480,
+  "historian/date=2026-08-25/readings_20260825.csv.gz": 81899,
+  "historian/date=2026-08-26/readings_20260826.csv.gz": 85368,
+  "historian/date=2026-08-27/readings_20260827.csv.gz": 81699,
+  "historian/date=2026-08-28/readings_20260828.csv.gz": 81664,
+  "historian/date=2026-08-29/readings_20260829.csv.gz": 81811,
+  "historian/date=2026-08-30/readings_20260830.csv.gz": 81260,
+  "historian/date=2026-08-31/readings_20260831.csv.gz": 81238,
+  "historian/date=2026-09-01/readings_20260901.csv.gz": 81792,
+  "historian/date=2026-09-02/readings_20260902.csv.gz": 81768,
+  "historian/date=2026-09-03/readings_20260903.csv.gz": 81467,
+  "historian/date=2026-09-04/readings_20260904.csv.gz": 85160,
+  "historian/date=2026-09-05/readings_20260905.csv.gz": 81815,
+  "historian/date=2026-09-06/readings_20260906.csv.gz": 81572,
+  "historian/date=2026-09-07/readings_20260907.csv.gz": 84998,
+  "historian/date=2026-09-08/readings_20260908.csv.gz": 81678,
+  "historian/date=2026-09-09/readings_20260909.csv.gz": 81780,
+  "historian/date=2026-09-10/readings_20260910.csv.gz": 81628,
+  "historian/date=2026-09-11/readings_20260911.csv.gz": 81543,
+  "historian/date=2026-09-12/readings_20260912.csv.gz": 81429,
+  "historian/date=2026-09-13/readings_20260913.csv.gz": 81332,
+  "historian/date=2026-09-14/readings_20260914.csv.gz": 85257,
+  "historian/date=2026-09-15/readings_20260915.csv.gz": 81810,
+  "historian/date=2026-09-16/readings_20260916.csv.gz": 81792,
+  "historian/date=2026-09-17/readings_20260917.csv.gz": 85512,
+  "historian/date=2026-09-18/readings_20260918.csv.gz": 81982,
+  "historian/date=2026-09-19/readings_20260919.csv.gz": 81978,
+  "historian/date=2026-09-20/readings_20260920.csv.gz": 81508,
+  "historian/date=2026-09-21/readings_20260921.csv.gz": 85168,
+  "historian/date=2026-09-22/readings_20260922.csv.gz": 81643,
+  "historian/date=2026-09-23/readings_20260923.csv.gz": 81317,
+  "historian/date=2026-09-24/readings_20260924.csv.gz": 81340,
+  "historian/date=2026-09-25/readings_20260925.csv.gz": 81133,
+  "historian/date=2026-09-26/readings_20260926.csv.gz": 85202,
+  "historian/date=2026-09-27/readings_20260927.csv.gz": 84121,
+  "reference/assets.csv": 1016,
+  "reference/work_orders.csv": 20448,
+  "historian/date=2026-09-28/readings_20260928.csv.gz": 80752,
+  "historian/date=2026-09-29/readings_20260929.csv.gz": 81613,
+  "historian/date=2026-09-30/readings_20260930.csv.gz": 84858,
+  "historian/date=2026-10-01/readings_20261001.csv.gz": 81621,
+  "historian/date=2026-10-02/readings_20261002.csv.gz": 81654,
+  "historian/date=2026-10-03/readings_20261003.csv.gz": 81535,
+  "historian/date=2026-10-04/readings_20261004.csv.gz": 81876,
+  "historian/date=2026-10-05/readings_20261005.csv.gz": 81529,
+  "historian/date=2026-10-06/readings_20261006.csv.gz": 81516,
+  "historian/date=2026-10-07/readings_20261007.csv.gz": 81737
+ }
+}
