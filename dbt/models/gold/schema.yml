@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: asset_daily_features
+    description: >
+      One row per pump and UTC day with features that describe its behavior and the label_failure_7d label.
+      Means, maxima and deviations only use the instants with the pump running (RUN_STATE = 1) and without spikes.
+      Every window looks backwards: day D only knows what happened up to D. Only the label looks into the future.
+    columns:
+      - name: asset_id
+        description: "Pump (e.g. PLT01-P101), same as in assets.csv."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('assets')
+                field: asset_id
+      - name: feature_date
+        description: "UTC day the row refers to. Together with asset_id it forms the key."
+        data_tests: [not_null]
+
+      - name: vib_mean
+        description: "Mean vibration of the day (mm/s), only with the pump running."
+      - name: vib_max
+        description: "Maximum vibration of the day (mm/s). Captures brief spikes that the mean hides."
+      - name: vib_std
+        description: "Standard deviation of the day's vibration: how much it oscillates."
+      - name: temp_mean
+        description: "Mean bearing temperature of the day (°C), with the pump running."
+      - name: temp_max
+        description: "Maximum bearing temperature of the day (°C)."
+      - name: press_mean
+        description: "Mean discharge pressure of the day (kPa), with the pump running."
+      - name: press_min
+        description: "Minimum pressure of the day (kPa). Pressure usually falls before a failure."
+      - name: press_std
+        description: "Standard deviation of the pressure: cavitation makes it oscillate."
+      - name: amps_mean
+        description: "Mean motor current of the day (A), with the pump running."
+      - name: amps_max
+        description: "Maximum motor current of the day (A)."
+      - name: frac_running
+        description: "Fraction of the day (0 to 1) with the pump running. 0 = stopped all day."
+        data_tests: [not_null]
+      - name: n_readings
+        description: "Number of instants of the day. 144 = complete day; fewer = missing data, the row is less reliable."
+      - name: vib_mean_7d
+        description: "Mean of vib_mean over the previous 6 days and today: recent trend."
+      - name: temp_mean_7d
+        description: "Mean of temp_mean over the previous 6 days and today."
+      - name: vib_delta_28d
+        description: "Today's vib_mean minus the average of the previous 28 days (without today). NULL if the baseline has fewer than 7 days."
+      - name: temp_delta_28d
+        description: "Same as vib_delta_28d, for temperature."
+      - name: press_delta_28d
+        description: "Same as vib_delta_28d, for pressure."
+      - name: amps_delta_28d
+        description: "Same as vib_delta_28d, for current."
+      - name: vib_delta_rel
+        description: "Change of today's vib_mean with respect to the 28-day baseline, as a proportion (0.10 = 10 % above its usual). NULL if the baseline has fewer than 7 days."
+      - name: press_delta_rel
+        description: "Same as vib_delta_rel, for pressure. Comparable between pumps that work at different kPa levels."
+      - name: amps_delta_rel
+        description: "Same as vib_delta_rel, for current."
+
+      - name: label_failure_7d
+        description: >
+          1 if there is a corrective order opened between the day after and 7 days after feature_date; 0 if not.
+          NULL in the last 7 days of data (the future does not exist yet), not 0.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+                quote: false

@@ -1,0 +1,21 @@
+# What does NOT go into the image: data (it goes through a volume), local environments, and everything that is not pipeline code.
+.venv/
+.git/
+data/
+.claude/
+.dagster/
+.tmp_dagster_home_*/
+.ipynb_checkpoints/
+notebooks/
+notes/
+guide/
+checks/
+tests/
+tools/
+ci/
+**/__pycache__/
+dbt/target/
+dbt/logs/
+.pytest_cache/
+.ruff_cache/
+.env

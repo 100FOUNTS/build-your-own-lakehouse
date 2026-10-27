@@ -1,0 +1,12 @@
+# Which database dbt connects to. Here: a DuckDB file.
+lakehouse:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      # The path comes from an environment variable (just like in lakehouse/paths.py), with a default value.
+      # That way the checks and Dagster can point to another database without touching this file.
+      path: "{{ env_var('LH_WAREHOUSE', 'data/warehouse.duckdb') }}"
+      threads: 1             # DuckDB allows a single writer: one thread avoids collisions
+      settings:
+        TimeZone: UTC        # without this, DuckDB would interpret TIMESTAMPTZ in your machine's time zone

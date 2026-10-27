@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: sensor_readings
+    description: >
+      One reading of one sensor of one pump at one UTC instant. No BAD readings or sentinels (-9999), no duplicates,
+      in standard units (°C, kPa, mm/s, A, 0/1). Isolated spikes are flagged with is_outlier; they are not deleted.
+      UNCERTAIN readings are kept with their quality.
+    columns:
+      - name: asset_id
+        description: "Pump, same as in assets.csv (e.g. PLT01-P101). Derived from the tag."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('assets')
+                field: asset_id
+      - name: ts_utc
+        description: "Instant of the reading in UTC (TIMESTAMP with no zone, already converted from -05:00 or Z)."
+        data_tests: [not_null]
+      - name: sensor
+        description: "Sensor type."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [VIB_MM_S, TEMP_BEARING, PRESS_DISCH, CURRENT_A, RUN_STATE]
+      - name: value
+        description: "Measurement in the standard unit of its sensor."
+        data_tests: [not_null]
+      - name: unit
+        description: "Standard unit of the sensor."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [mm/s, degC, kPa, A, bool]
+      - name: is_outlier
+        description: "true if it is a spurious spike: it is far from its neighborhood and from the previous and next readings."
+        data_tests: [not_null]
+      - name: quality
+        description: "GOOD or UNCERTAIN (BAD ones are excluded). Gold decides whether to use the UNCERTAIN ones."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [GOOD, UNCERTAIN]
+
+  - name: work_orders
+    description: "One work order per row. wo_type is normalized; corrective repairs are the failures."
+    columns:
+      - name: wo_id
+        description: "Order identifier."
+        data_tests: [unique, not_null]
+      - name: asset_id
+        description: "Affected pump."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('assets')
+                field: asset_id
+      - name: wo_type
+        description: "Type of work, normalized to three values."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [PREVENTIVE, CORRECTIVE, INSPECTION]
+      - name: opened_at
+        description: "Opening of the order, in UTC."
+        data_tests: [not_null]
+
+  - name: assets
+    description: "One pump per row (20), with the right types."
+    columns:
+      - name: asset_id
+        description: "Pump identifier."
+        data_tests: [unique, not_null]
+      - name: criticality
+        description: "Criticality for the plant (A, B or C)."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [A, B, C]

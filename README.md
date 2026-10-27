@@ -1,3 +1,5 @@
+> **This is the `solution` branch: it contains a reference solution (spoilers).** Build the exercise yourself on `main` first. See [`SOLUTION.md`](SOLUTION.md).
+
 # Predictive-maintenance lakehouse — a build-it-yourself data engineering exercise
 
 An exercise to learn **data engineering by building, not by reading**. You start from dirty raw files of a pumping

@@ -1,0 +1,67 @@
+# Continuous integration: on every push and pull request, a clean machine runs what you run by hand.
+# If something breaks, the PR turns red BEFORE the change reaches main.
+#
+# To enable it, copy this file to .github/workflows/ci.yml (pushing a workflow file needs the `workflow` token scope).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# If you push twice in a row, cancel the old run: it does not spend minutes on something already obsolete.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read      # the minimum: this workflow only reads the repo
+
+jobs:
+  pipeline:
+    name: Lint, pipeline and tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true          # keeps the dependencies between runs
+          python-version: "3.12"
+
+      # --locked: installs EXACTLY what uv.lock says (fails if pyproject.toml and uv.lock do not match).
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Lint (ruff)
+        run: uv run ruff check src tests tools
+
+      # On a clean machine data/warehouse.duckdb does not exist: this proves the pipeline works FROM SCRATCH
+      # (bronze -> silver -> gold with dbt tests -> model).
+      - name: Full pipeline (bronze, dbt build, model)
+        run: make run
+
+      - name: Tests (step checks and the temporal-leakage test)
+        run: uv run pytest checks tests
+
+  image:
+    name: Docker image
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the image
+        run: docker build -t predictive-maintenance-lakehouse:ci .
+
+      # Smoke test: the container starts and /health answers. Without it, an image that does not start would pass green.
+      - name: The API starts and answers on /health
+        run: |
+          docker run -d --name api -p 8000:8000 predictive-maintenance-lakehouse:ci
+          for i in $(seq 1 20); do
+            curl -fsS http://localhost:8000/health && exit 0
+            sleep 1
+          done
+          docker logs api
+          exit 1

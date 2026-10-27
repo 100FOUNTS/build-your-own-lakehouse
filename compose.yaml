@@ -1,0 +1,34 @@
+# Two services with the SAME image and the SAME data folder:
+#   pipeline  -> batch work: reads data/raw, writes bronze, silver, gold, the model and ml.predictions. Ends by itself.
+#   api       -> service that stays on and only READS ml.predictions.
+#
+#   docker compose run --rm pipeline     # runs the whole pipeline (as many times as you want: it is idempotent)
+#   docker compose up -d api             # brings up the API at http://localhost:8000/docs
+#
+# Remember step 7: DuckDB allows one writer OR several readers. While the pipeline writes, the API answers 503
+# with Retry-After; when it finishes, it answers 200 again.
+
+x-lakehouse: &lakehouse
+  build: .
+  image: predictive-maintenance-lakehouse:local
+  volumes:
+    - ./data:/app/data      # the data lives OUTSIDE the container: if you delete it, you lose nothing
+
+services:
+  pipeline:
+    <<: *lakehouse
+    # The same Dagster graph as in step 6, without the UI: it materializes everything in order.
+    command: ["dagster", "asset", "materialize", "-m", "lakehouse.definitions", "--select", "*"]
+    profiles: ["batch"]     # it does not start with `docker compose up`; only with `docker compose run pipeline`
+
+  api:
+    <<: *lakehouse
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    # Healthcheck: Docker queries /health and marks the container as healthy or not (slim has no curl, Python is used).
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
