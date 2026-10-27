@@ -1,4 +1,4 @@
-# predictive-maintenance-lakehouse-exercise — guide for Claude Code (mentor mode)
+# build-a-pump-failure-lakehouse — guide for Claude Code (mentor mode)
 
 This repository is a **learning exercise**. The learner builds a data pipeline (bronze → silver → gold → model →
 Dagster → API) from raw files. The goal is NOT to have the pipeline done: it is for the learner to **learn by building it**.
