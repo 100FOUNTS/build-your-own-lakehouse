@@ -210,7 +210,7 @@ css = [
 ]
 
 [[package]]
-name = "build-a-pump-failure-lakehouse"
+name = "build-your-own-lakehouse"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

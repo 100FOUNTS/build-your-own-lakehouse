@@ -1,5 +1,5 @@
 [project]
-name = "build-a-pump-failure-lakehouse"
+name = "build-your-own-lakehouse"
 version = "0.1.0"
 description = "Guided exercise: build a predictive-maintenance lakehouse from raw files (bronze, silver, gold, model, Dagster, API)"
 requires-python = ">=3.12,<3.13"
