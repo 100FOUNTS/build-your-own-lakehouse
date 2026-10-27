@@ -75,8 +75,8 @@ It also works without Claude Code: the guide and the checks are self-sufficient.
 Requirements: [uv](https://docs.astral.sh/uv/) (on macOS: `brew install uv`). Python 3.12 is installed by uv.
 
 ```bash
-git clone https://github.com/100FOUNTS/predictive-maintenance-lakehouse-exercise.git
-cd predictive-maintenance-lakehouse-exercise
+git clone https://github.com/100FOUNTS/build-a-pump-failure-lakehouse.git
+cd build-a-pump-failure-lakehouse
 make setup          # installs dependencies (uses uv)
 make check-0        # is everything ready?
 ```
