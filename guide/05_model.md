@@ -31,6 +31,21 @@ classic ways to fool yourself, and this step forces you to dodge them:
 3. **Using the wrong metric.** Only ~8 out of 100 days are positive. A model that always answers "it will not fail"
    is right 92 % of the time and is useless. That is why *accuracy* is not used here.
 
+The temporal split you will build (example dates; yours depend on your choices):
+
+```mermaid
+gantt
+    title Temporal split with a purge
+    dateFormat YYYY-MM-DD
+    axisFormat %b
+    tickInterval 1month
+    section Rows of gold
+    train, the past              :done, t1, 2026-05-08, 2026-08-08
+    purge, a 7-day gap           :crit, t2, 2026-08-09, 2026-08-15
+    test, the unseen future      :active, t3, 2026-08-16, 2026-09-20
+    live, no label yet           :t4, 2026-09-21, 2026-09-27
+```
+
 ## What it is for in a real job
 
 The conversation with the business is never "my AUC is 0.9". It is: *"of the 11 failures there were in the last month and a half, how many
